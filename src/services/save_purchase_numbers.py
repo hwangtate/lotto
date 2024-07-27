@@ -1,4 +1,4 @@
-class SaveWinningNumbersService:
+class SavePurchaseNumbersService:
     """
     Service to save winning numbers
     """
@@ -24,4 +24,4 @@ class SaveWinningNumbersService:
         구매한 로또 리턴
         :return: list
         """
-        return [12, 34, 56, 78, 89, 48]
+        return [5, 10, 11, 17, 21, 22]

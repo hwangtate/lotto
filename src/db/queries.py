@@ -1,6 +1,7 @@
-from connection import cursor, connection
+from src.db.connection import cursor, connection
 from src.crawlers.lotto_crawler import draw_date, winning_numbers, bonus_number, draw_number
-from src.services.save_winning_numbers import SaveWinningNumbersService
+from src.services.save_purchase_numbers import SavePurchaseNumbersService
+
 
 def insert_db_lotto_numbers() -> None:
     """
@@ -28,9 +29,10 @@ def insert_db_purchase_lotto_numbers() -> None:
         INSERT INTO purchase_numbers(purchase_date, draw_number, number_1, number_2, number_3, number_4, number_5, number_6)
         VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
         """,
-        (SaveWinningNumbersService.purchase_date(), SaveWinningNumbersService.purchase_draw_number(),
-         SaveWinningNumbersService.purchase_lotto_number()[0], SaveWinningNumbersService.purchase_lotto_number()[1],
-         SaveWinningNumbersService.purchase_lotto_number()[2], SaveWinningNumbersService.purchase_lotto_number()[3],
-         SaveWinningNumbersService.purchase_lotto_number()[4], SaveWinningNumbersService.purchase_lotto_number()[5])
+        (SavePurchaseNumbersService.purchase_date(), SavePurchaseNumbersService.purchase_draw_number(),
+         SavePurchaseNumbersService.purchase_lotto_number()[0], SavePurchaseNumbersService.purchase_lotto_number()[1],
+         SavePurchaseNumbersService.purchase_lotto_number()[2], SavePurchaseNumbersService.purchase_lotto_number()[3],
+         SavePurchaseNumbersService.purchase_lotto_number()[4], SavePurchaseNumbersService.purchase_lotto_number()[5])
     )
     connection.commit()
+
