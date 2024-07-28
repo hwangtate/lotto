@@ -1,3 +1,6 @@
+from datetime import datetime
+
+
 class SavePurchaseNumbersService:
     """
     Service to save winning numbers
@@ -8,7 +11,7 @@ class SavePurchaseNumbersService:
         구매 날짜 리턴
         :return: str
         """
-        return '2024-07-27'
+        return str(datetime.now().date())
 
     @staticmethod
     def purchase_draw_number() -> int:
@@ -16,7 +19,7 @@ class SavePurchaseNumbersService:
         구매 회차 리턴
         :return: int
         """
-        return 1129
+        return int(input("구매하실 로또의 회차를 입력해주세요. : "))
 
     @staticmethod
     def purchase_lotto_number() -> list:
@@ -24,4 +27,5 @@ class SavePurchaseNumbersService:
         구매한 로또 리턴
         :return: list
         """
-        return [5, 10, 11, 17, 21, 22]
+        return list(map(int, input("구매할 로또 번호를 입력해주세요. : ").split()))
+
