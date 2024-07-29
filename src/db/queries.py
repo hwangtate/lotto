@@ -1,5 +1,5 @@
 from src.db.connection import cursor, connection
-from src.crawlers.lotto_crawler import Crawler, draw
+from src.crawlers import Crawler
 from src.services.save_purchase_numbers import SavePurchaseNumbersService
 
 

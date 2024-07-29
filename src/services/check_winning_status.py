@@ -36,7 +36,7 @@ class CheckWinningStatus:
         bonus_number = cursor.fetchone()
         return bonus_number
 
-    def check_winning_status (self) :
+    def check_winning_status(self):
         p = self.get_purchase_numbers()
         w = self.get_winning_numbers()
         b = self.get_bonus_numbers()

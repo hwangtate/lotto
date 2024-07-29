@@ -3,7 +3,11 @@ from datetime import datetime
 
 class SavePurchaseNumbersService:
     """
-    Service to save winning numbers
+    서비스 폴더에 들어가야 적당한지 잘 모르겠음
+    db 폴더도 나쁘지 않을 것 같긴 하지만 직접 사용자가 구매번호를 입력하는 거라
+    서비스에 더 가까워 보임
+
+    함수를 안 쓰고 스태틱 메소드를 사용한 이유는 좀 더 명확하게 구분을 짓기 위해 스태틱 메서드를 사용함
     """
     @staticmethod
     def purchase_date() -> str:

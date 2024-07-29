@@ -1,0 +1,2 @@
+from .queries import truncate_db_purchase_numbers, truncate_db_lotto_numbers
+from .queries import insert_db_purchase_lotto_numbers, insert_db_lotto_numbers

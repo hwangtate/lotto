@@ -1,0 +1,1 @@
+from .lotto_crawler import Crawler, draw

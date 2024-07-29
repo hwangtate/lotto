@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from datetime import datetime
-
+from src.utils.webdriver import *
 
 def draw():
     draw_number = int(input("크롤링 하실 회차 번호를 입력해주세요. : "))

@@ -7,7 +7,7 @@ class LottoRule:
         """
         self.winning_number_list = [win_num_1, win_num_2, win_num_3, win_num_4, win_num_5, win_num_6]
         self.purchase_number_list = [pur_num_1, pur_num_2, pur_num_3, pur_num_4, pur_num_5, pur_num_6]
-        self.bonus_num = bonus_num
+        self.bonus_num = bonus_num[0]
 
     def first_place(self) -> str | None:
         """
@@ -22,9 +22,8 @@ class LottoRule:
         로또 2등 당첨 기준
         :return: str
         """
-        self.winning_number_list.append(self.bonus_num)
 
-        if len(set(set(self.winning_number_list)) & set(self.purchase_number_list)) == 6:
+        if len(set(self.winning_number_list) & set(self.purchase_number_list)) == 5:
             for i in self.purchase_number_list:
                 if i == self.bonus_num:
                     return "2등입니다!"
@@ -38,7 +37,7 @@ class LottoRule:
         """
 
         if len(set(self.winning_number_list) & set(self.purchase_number_list)) == 5:
-            return "3등입니다!"
+            return "3등입니다!!!!!!!!"
 
 
     def fourth_place(self) -> str:
